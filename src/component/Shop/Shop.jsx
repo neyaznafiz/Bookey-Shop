@@ -17,30 +17,33 @@ const Shop = () => {
 
     }, [])
 
-    const addToCartHandle = () => {
-  console.log('clicked');
-}
 
-return (
-    <div className='shop-container'>
 
-        <div className='product-container'>
-            {
-                flowers.map(flower => <Product
-                    key={flower.id}
-                    flowers={flower}
-                    addToCartHandle={addToCartHandle}
-                ></Product>)
-            }
+    const addToCartHandle = (flowers) => {
+        const newCart = [...cart, flowers]
+        setCart(newCart)
+    }
+
+    return (
+        <div className='shop-container'>
+
+            <div className='product-container'>
+                {
+                    flowers.map(flower => <Product
+                        key={flower.id}
+                        flowers={flowers}
+                        addToCartHandle={addToCartHandle}
+                    ></Product>)
+                }
+            </div>
+
+            <div className='cart-container'>
+                <Cart
+                    cart={cart}
+                ></Cart>
+            </div>
         </div>
-
-        <div className='cart-container'>
-            <Cart 
-            cart={cart}
-            ></Cart>
-        </div>
-    </div>
-);
+    );
 };
 
 export default Shop;

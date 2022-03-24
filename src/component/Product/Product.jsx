@@ -15,7 +15,7 @@ const Product = ({flowers, addToCartHandle }) => {
                 <h3>Name: {name}</h3>
                 <p>Rating: {ratings}</p>
                 <h5>Price: ${price}</h5>
-                <button onClick={() => addToCartHandle()} className='cart-btn'> Add To Cart </button>
+                <button onClick={() => addToCartHandle(flowers)} className='cart-btn'> Add To Cart </button>
             </div>
 
         </div>
