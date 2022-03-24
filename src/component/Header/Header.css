@@ -1,0 +1,29 @@
+.nav {
+    background-color: #CAD5E2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 18px;
+}
+
+.nav h3 {
+    font-size: 30px;
+    padding: 4px 6px;
+    margin: 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.nav a:hover{
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    padding: 4px;
+}
