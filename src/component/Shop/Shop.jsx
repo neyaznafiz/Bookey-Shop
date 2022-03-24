@@ -9,6 +9,7 @@ const Shop = () => {
 
     const [cart, setCart] = useState([])
 
+    // data fetch
     useEffect(() => {
 
         fetch('https://raw.githubusercontent.com/neyaznafiz/Bookey-Shop-Data/main/flowers.json')
@@ -18,7 +19,7 @@ const Shop = () => {
     }, [])
 
 
-
+// add to cart button handle
     const addToCartHandle = (flowers) => {
         const newCart = [...cart, flowers]
         setCart(newCart)
@@ -31,7 +32,7 @@ const Shop = () => {
                 {
                     flowers.map(flower => <Product
                         key={flower.id}
-                        flowers={flowers}
+                        flowers={flower}
                         addToCartHandle={addToCartHandle}
                     ></Product>)
                 }

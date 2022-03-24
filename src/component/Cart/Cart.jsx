@@ -1,14 +1,14 @@
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({cart}) => {
+const Cart = ({ cart }) => {
 
     // const {cart} = props
 
     return (
         <div className='cart'>
             <h4>Order Summary</h4>
-
+            {/* cart ditails show */}
             <p>Selected Items : {cart.length}</p>
             <p>Total Price : </p>
             <p>Delivery Charge : </p>
