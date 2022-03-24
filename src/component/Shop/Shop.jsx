@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
 
 const Shop = () => {
 
     const [flowers, setFlowers] = useState([])
+
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
 
@@ -14,23 +17,30 @@ const Shop = () => {
 
     }, [])
 
-    return (
-        <div className='shop-container'>
+    const addToCartHandle = () => {
+  console.log('clicked');
+}
 
-            <div className='product-container'>
-                {
-                    flowers.map(flower => <Product
+return (
+    <div className='shop-container'>
+
+        <div className='product-container'>
+            {
+                flowers.map(flower => <Product
                     key={flower.id}
-                        flowers={flower}
-                    ></Product> )
-                }
-            </div>
-
-            <div className='cart-container'>
-                <h1>this is cart</h1>
-            </div>
+                    flowers={flower}
+                    addToCartHandle={addToCartHandle}
+                ></Product>)
+            }
         </div>
-    );
+
+        <div className='cart-container'>
+            <Cart 
+            cart={cart}
+            ></Cart>
+        </div>
+    </div>
+);
 };
 
 export default Shop;

@@ -10,3 +10,8 @@
     margin: 50px 50px;
 
 }
+
+.cart-container{
+    border: 2px solid gray;
+    background-color: rgba(128, 128, 128, 0.2);
+}
