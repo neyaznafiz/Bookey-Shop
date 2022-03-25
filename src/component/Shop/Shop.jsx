@@ -13,7 +13,7 @@ const Shop = () => {
     // data fetch
     useEffect(() => {
 
-        fetch(`https://raw.githubusercontent.com/neyaznafiz/Bookey-Shop-Data/main/flowers.json`)
+        fetch(`https://raw.jsongithubusercontent.com/neyaznafiz/Bookey-Shop-Data/main/flowers`)
             .then(res => res.json())
             .then(data => setFlowers(data))
 
