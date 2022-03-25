@@ -9,9 +9,12 @@ const Cart = ({ cart }) => {
     for (const flower of cart) {
         // console.log(flower.delivery);
         total = total + flower.price
-        delivery = delivery + flower.delivery 
-       
+        delivery = delivery + flower.delivery
     }
+
+    const tax = total * 10 / 100
+
+    const grandTotal = total + delivery + tax
 
     return (
         <div className='cart'>
@@ -20,8 +23,8 @@ const Cart = ({ cart }) => {
             <p>Selected Items : {cart.length}</p>
             <p>Total Price : ${total}</p>
             <p>Delivery Charge : ${delivery}</p>
-            <p>Tax :</p>
-            <h5>Grand Total :</h5>
+            <p>Tax : ${tax}</p>
+            <h5>Grand Total : ${grandTotal}</h5>
 
         </div>
     );
