@@ -3,3 +3,14 @@
     top: 0;
     padding: 20px 20px;
 }
+
+.cart h4{
+    background-color: whitesmoke;
+border: 2px solid whitesmoke;
+border-radius: 10px;
+padding: 5px;
+}
+
+.cart hr {
+    text-decoration: none;
+}

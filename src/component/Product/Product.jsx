@@ -10,7 +10,7 @@ const Product = ({ flowers, addToCartHandle }) => {
         <div className='product-container'>
             {/* show products info */}
             <div className='product-info'>
-                <img src={img} alt="" />
+                {/* <img src={img} alt="" /> */}
                 <h3>Name: {name}</h3>
                 <p>Rating: {ratings}</p>
                 <h5>Price: ${price}</h5>

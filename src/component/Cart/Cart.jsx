@@ -19,6 +19,7 @@ const Cart = ({ cart }) => {
     return (
         <div className='cart'>
             <h4>Order Summary</h4>
+            <hr />
             {/* cart ditails show */}
             <p>Selected Items : {cart.length}</p>
             <p>Total Price : ${total}</p>
