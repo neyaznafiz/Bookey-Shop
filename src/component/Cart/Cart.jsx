@@ -3,17 +3,19 @@ import './Cart.css'
 
 const Cart = ({ cart }) => {
 
+    // tolal and delivery charge math
     let total = 0
     let delivery = 0
 
     for (const flower of cart) {
-        // console.log(flower.delivery);
         total = total + flower.price
         delivery = delivery + flower.delivery
     }
 
+    // tax math
     const tax = total * 10 / 100
 
+    // grant total math
     const grandTotal = total + delivery + tax
 
     return (

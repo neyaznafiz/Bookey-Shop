@@ -1,6 +1,7 @@
 import React from 'react';
 import './Product.css'
 
+// get info to props and distructure from props
 const Product = ({ flowers, addToCartHandle }) => {
 
     // get property from api array
